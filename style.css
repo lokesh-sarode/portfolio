@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,900;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:wght@725&family=SUSE:ital,wght@0,100..900;1,100..900&family=Style+Script&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -5,82 +7,81 @@
 }
 
 body {
-    background: black !important;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
 }
 
-img {
-    float: left;
-    width: 60px;
-    border: 1px solid transparent;
-    border-radius: 100px;
+.header {
+    padding: 10px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
 }
 
-h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 20px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
 }
 
-#name{
+.logo img {
+    border-radius: 50%;
+    border: 3px solid cyan;
+}
+
+.name {
+    font-family: "Style Script", cursive;
+    color: cyan;
+    transition: 0.3s;
+}
+
+.name:hover {
     color: white;
 }
-.logo{
+
+.header-list {
     display: flex;
-    flex-grow: 1;
-    align-items: center;
+    gap: 30px;
 }
 
-.header{
-    display: flex;
-    align-items: center;
-    padding: 0px 20px;
-    background: black;
-    border-bottom: 1px solid yellow;
-    /* animation-name: ; */
+.header-list a,
+.button {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
 }
 
-.header-list{
+.header-list a:hover {
+    color: cyan;
+    text-decoration: none;
+}
+
+.section1-wrapper {
+    height: 100vh;
     display: flex;
-    flex-grow: 1;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
 }
 
-a{
-    text-decoration: none !important;
-    color: white !important;
-    font-size: large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-a:hover{
-    color: yellow !important;
-}
-
-.card{
-    color: white !important;
-    background: transparent !important;
-    border: 1px solid yellow !important;
-    /* width: 100%; */
-}
-
-h3 {
-    color: white;
-    margin-left: 20px;
-    /* margin-top: 50px; */
-}
-
-ul {
-    padding-left: 20px;
-    font-size: 15px;
-}
-.rightside{
-    margin-right: 10px;
-    color: white;
-    /* float: right; */
-}
-
-.container{
+.section1 {
     display: flex;
-    justify-content: center;
-    padding: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
+.section1 #coding-photo {
+    filter: drop-shadow(5px 5px 2px cyan);
+}
+
+
+.button {
+    background: linear-gradient(to right, cyan, darkblue);
+    padding: 8px 25px;
+    border-radius: 5px;
+}
