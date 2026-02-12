@@ -9,6 +9,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     position: relative;
+    background-color: black !important;
 }
 
 .header {
@@ -20,6 +21,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: black;
+    animation: loading-down 1s ease-in;
 }
 
 .logo {
@@ -56,9 +58,16 @@ body {
     transition: 0.5s;
 }
 
-.header-list a:hover {
+.underline {
+    background: linear-gradient(currentColor 0 0) bottom left / var(--underline-width, 0%) 0.1em no-repeat;
+    transition: background-size 0.5s;
+    /* width: max-content; */
+}
+
+.underline:hover {
     color: cyan;
     text-decoration: none;
+    --underline-width: 100%;
 }
 
 .section1-wrapper {
@@ -72,6 +81,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: loading-up 1s ease-in;
 
 }
 
@@ -84,4 +94,70 @@ body {
     background: linear-gradient(to right, cyan, darkblue);
     padding: 8px 25px;
     border-radius: 5px;
+    /* transition: 0.5s; */
+}
+
+.section2 {}
+
+.section2 .skill-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.headings {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.skill-icons div {
+    text-align: center;
+}
+
+.skill-icons i,
+.skill-icons .skill-icon {
+    margin-bottom: 10px;
+}
+
+.skill-icon {
+    width: 50px;
+    animation: bounce 0.5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes bounce {
+    from {
+        transform: scale(0.9);
+        opacity: 0.4;
+    }
+
+    to {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+}
+
+@keyframes loading-down {
+    from {
+        transform: translateY(-30px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loading-up {
+    from {
+        transform: translateY(30px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
