@@ -91,10 +91,49 @@ body {
 
 
 .button {
-    background: linear-gradient(to right, cyan, darkblue);
+    /* background: linear-gradient(to right, cyan, darkblue);
     padding: 8px 25px;
-    border-radius: 5px;
+    border-radius: 5px; */
     /* transition: 0.5s; */
+
+    outline: none;
+    border: none;
+    background: #00f7ff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+    transition: 0.4s;
+    box-shadow: 0 0 5px #00f7ff;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px #00f7ff, 0 0 10px #00f7ff;
+}
+
+.resumePopup {
+    position: relative;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: white;
+    width: max-content;
+    padding: 30px 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: start;
+    border-radius: 20px;
+}
+
+.active {
+    display: block;
 }
 
 .section1-wrapper,
@@ -104,10 +143,10 @@ body {
 .section5,
 .section6 {
     height: 100vh;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 
-.section2 .skill-icons {
+.section3 .skill-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,14 +181,8 @@ body {
 
 .skill-icon {
     width: 50px;
-    animation: bounce 0.5s ease-in-out infinite alternate;
+    animation: bounce 0.52s ease-in-out infinite alternate;
 }
-
-.fa-bounce {
-    animation-duration: 0.5s;
-}
-
-
 
 .section5 .imgBox {
     height: 200px;
@@ -228,7 +261,7 @@ body {
     }
 
     .section1,
-    .section2,
+    .section3,
     .section3,
     .section4,
     .section5,
