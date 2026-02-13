@@ -71,7 +71,7 @@ body {
 }
 
 .section1-wrapper {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -97,8 +97,14 @@ body {
     /* transition: 0.5s; */
 }
 
-.section2 {
+.section1-wrapper,
+.section2,
+.section3,
+.section4,
+.section5,
+.section6 {
     height: 100vh;
+    padding-top: 100px;
 }
 
 .section2 .skill-icons {
@@ -113,6 +119,18 @@ body {
     margin: 0 auto;
 }
 
+.skills-wrapper {
+    padding-bottom: 50px;
+}
+
+.skills-wrapper h3 {
+    padding-bottom: 30px;
+}
+
+.skills-wrapper h3 {
+    color: cyan;
+}
+
 .skill-icons div {
     text-align: center;
 }
@@ -125,6 +143,36 @@ body {
 .skill-icon {
     width: 50px;
     animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+
+
+.section5 .imgBox {
+    height: 200px;
+    width: 300px;
+    background-color: white;
+}
+
+.section5 .follow-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section6 .imgBox {
+    height: 50px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.section6 .follow-icons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
 }
 
 @keyframes bounce {
