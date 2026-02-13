@@ -145,6 +145,10 @@ body {
     animation: bounce 0.5s ease-in-out infinite alternate;
 }
 
+.fa-bounce {
+    animation-duration: 0.5s;
+}
+
 
 
 .section5 .imgBox {
@@ -209,5 +213,31 @@ body {
     to {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header-list {
+        flex-wrap: wrap;
+    }
+
+    .section1,
+    .section2,
+    .section3,
+    .section4,
+    .section5,
+    .section6 {
+        padding-top: 0px;
+    }
+
+    .section1 {
+        flex-direction: column;
+        gap: 20px;
     }
 }
