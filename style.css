@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     position: relative;
@@ -153,8 +158,10 @@ body {
 .section3,
 .section4,
 .section5,
-.section6 {
+.section6,
+.section7 {
     height: 100vh;
+    /* scroll-margin-top: 80px; */
     /* padding-top: 100px; */
 }
 
@@ -196,26 +203,15 @@ body {
     animation: bounce 0.52s ease-in-out infinite alternate;
 }
 
-.section5 .imgBox {
-    height: 200px;
-    width: 300px;
-    background-color: white;
-}
 
-.section5 .follow-icons {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.section6 .imgBox {
+.section7 .imgBox {
     height: 50px;
     width: 300px;
     background-color: white;
     border-radius: 20px;
 }
 
-.section6 .follow-icons {
+.section7 .follow-icons {
     display: flex;
     justify-content: start;
     align-items: center;
