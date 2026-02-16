@@ -17,6 +17,7 @@
 </head>
 
 <body class="text-white">
+    <div class="scroll-down"></div>
     <div class="header container" id="header">
         <div class="logo">
             <img src="assets/profile-photo.JPG" alt="profile-photo" width="40px">
@@ -34,6 +35,7 @@
             <a class="underline" href="#contact">Contact</a>
         </div>
     </div>
+    <!-- Scroll down -->
 
     <div class="container">
         <div class="section1-wrapper" id="home">
@@ -41,7 +43,7 @@
                 <div class="content">
                     <h1 style="color: cyan; font-size: 48px;">Hi,</h1>
                     <h1>My name is <span class="name">Lokesh Sarode</span> </h1>
-                    <h3>A <span class="typing"></span></h3>
+                    <h5>A <span class="typing"></span></h5>
                     <p>
                         I build secure, scalable web applications using Python's Django framework,
                         with a strong interest in cybersecurity and problem-solving.
@@ -69,7 +71,7 @@
 
                 </div>
 
-                <img id="coding-photo" src="assets/coding-photo.png" alt="" width="50%">
+                <img id="coding-photo" class="float" src="assets/coding-photo.png" alt="" width="50%">
             </div>
             <div class="text-center">
                 <a href="#about"><i class="fa-solid fa-angles-down fa-beat-fade fa-2xl" style="color: cyan;"></i></a>
@@ -80,22 +82,119 @@
             <div class="headings">
                 <h1 class="underline">About</h1>
             </div>
-            <div>
-                <p>
-                    I build secure, scalable web applications using Python, Django, and Flask,
-                    with a strong interest in cybersecurity and problem-solving.
+            <div class="row">
+                <p class="text-center">
+                    I am a <span class="name" style="font-size: 20px;">Web Developer</span> currently working in the
+                    industry with hands-on
+                    experience in building responsive and user-focused web applications.
                 </p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quaerat necessitatibus. Deleniti
-                nostrum ex pariatur nihil nam vel! Laudantium, temporibus ducimus nulla nihil accusamus quas,
-                aliquam
-                quisquam quaerat, quod molestiae ab! Esse voluptatem, earum nam tempora modi sunt rem voluptates
-                porro
-                suscipit ex reprehenderit voluptatibus eius quisquam at eum placeat perferendis praesentium deserunt
-                pariatur nihil mollitia incidunt possimus quo? Officia, consequatur atque. Iste eveniet earum
-                debitis
-                doloribus voluptates, fugiat rem aperiam itaque quas laudantium suscipit sed totam facere mollitia
-                perferendis magnam id iusto dignissimos quia possimus exercitationem, provident aliquam deserunt
-                aspernatur? Enim magnam pariatur doloribus ab ut provident maiores molestiae?
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="left">
+                        <!-- Temporary -->
+                        <!-- <img src="assets/profile-photo-edited.png" alt="" width="90%"
+                            style="filter: drop-shadow(1px 1px 10px #fff)"> -->
+                        <div class="imgBox float text-center"
+                            style="width: 80%; height: 350px; border: 2px solid white; background-color: cyan; border-radius: 30px;">
+                            <img src="assets/profile-photo.JPG" alt="" width="90%"
+                                style="margin-top: 13px; border-radius: 20px; box-shadow: 1px 1px 5px black;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12">
+                    <div class="right">
+                        <div>
+                            <p>
+                                Alongside frontend development, I actively explore <span class="name"
+                                    style="font-size: 20px;">Cybersecurity</span>
+                            </p>
+                            <p> I am particularly interested in <span class="name" style="font-size: 20px;">Web
+                                    Application Security, Vulnerability Assessment</span>, OWASP Top 10 risks, and
+                                secure coding practices.
+                            </p>
+                            <p>
+                                My goal is to bridge development and security by building
+                                applications that are secure by design.
+                            </p>
+                        </div>
+                        <div class="about-strengths">
+                            <div class="strength-card">
+                                <h4>Frontend Development</h4>
+                                <p>Responsive UI, modern layouts, performance optimization</p>
+                            </div>
+
+                            <div class="strength-card">
+                                <h4>Secure Coding</h4>
+                                <p>Input validation, authentication flow awareness, OWASP basics</p>
+                            </div>
+
+                            <div class="strength-card">
+                                <h4>Continuous Learning</h4>
+                                <p>Actively exploring web vulnerabilities & testing tools</p>
+                            </div>
+                        </div>
+
+
+                        <div class="currentRole">
+                            <div>
+                                <h4>Current Role</h4>
+                                <a href="https://arkentechsolutions.com" target="_blank">
+                                    <img src="https://arkentechsolutions.com/wp-content/uploads/2023/04/Arken-Logo.png"
+                                        alt="currentCompany logo" width="150px">
+                                </a>
+                                <h5 style="margin-bottom: 0px;">Web Developer</h5>
+                                <span>3 months of Industry Expereince</span>
+                            </div>
+                            <div>
+                                <h4>What I'm currently Learning</h4>
+                                <ul>
+                                    <li>
+                                        Django Framework
+                                    </li>
+                                    <li>
+                                        Backend Security Practices
+                                    </li>
+                                    <li>
+                                        Web Application Security Testing
+                                    </li>
+                                    <li>
+                                        OWASP top 10 Vulnerabilities
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- <div class="cards d-flex gap-3 flex-wrap">
+                            <div class="card" style=" background: rgba(255,255,255,0.05); color: white;">
+                                <div class="card-img">
+                                    <img src="assets/coding-photo.png" alt="" width="100%">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">This is the title for the card</div>
+                                    <div class="card-desc">This is the description</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/coding-photo.png" alt="" width="100%">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">This is the title for the card</div>
+                                    <div class="card-desc">This is the description</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/coding-photo.png" alt="" width="100%">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">This is the title for the card</div>
+                                    <div class="card-desc">This is the description</div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -190,27 +289,22 @@
                 <h1 class="underline">Projects</h1>
             </div>
 
-            <div class="follow-icons">
-                <div class="imgBox">
-
-                </div>
-                <div class="imgBox">
-
-                </div>
-                <div class="imgBox">
-
-                </div>
-                <div class="imgBox">
-
-                </div>
-                <div class="imgBox">
-
-                </div>
-                <div class="imgBox">
-
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/projects/sports-portal-img.png" alt="" width="100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Sports And Event Management System</h4>
+                        <h6 class="card-subtitle">Python, Django, Html, Css, Bootstrap</h6>
+                        <p class="card-text">
+                            SportsPortal is a web-based platform for managing sports events.
+                        </p>
+                        <a href="https://sports-portal-7g1d.onrender.com/" target="_blank" class="button">View Demo</a>
+                    </div>
                 </div>
             </div>
+
         </div>
+
         <div class="section5" id="experience">
             <div class="headings">
                 <h1 class="underline">Experience</h1>

@@ -3,19 +3,21 @@ const text = [
     "Python Developer",
     "Cybersecurity Specialist",
     "VAPT Engineer"
-]
+];
 
 let count = 0;
 let index = 0;
-
 let currentText = "";
 let letter = "";
 
-(function type() {
-    if (count === text.length) count = 0;
+function type() {
+
+    if (count === text.length) {
+        count = 0;
+    }
 
     currentText = text[count];
-    letter = currentText.slice(0, ++index);
+    letter = currentText.slice(0, index++);
 
     document.querySelector(".typing").textContent = letter;
 
@@ -23,11 +25,15 @@ let letter = "";
         setTimeout(() => {
             index = 0;
             count++;
+            type();   // Call again AFTER delay
         }, 1000);
+    } else {
+        setTimeout(type, 120); // typing speed
     }
-    setTimeout(type, 200);
 }
-)();
+
+type();
+
 
 
 
