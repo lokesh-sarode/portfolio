@@ -30,7 +30,19 @@ let letter = "";
 )();
 
 
-const donwloadBtn = document.getElementById(".downloadBtn");
-donwloadBtn.addEventListener("click", () => {
-    document.getElementById("popup").classList.toggle(".active");
+
+const donwloadBtn = document.getElementById("downloadBtn");
+const popup = document.getElementById("popup");
+
+donwloadBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    popup.classList.toggle("active");
 })
+
+popup.addEventListener("click", (e) => {
+    e.stopPropagation();
+})
+// closing popup
+document.addEventListener("click", () => {
+    popup.classList.remove("active");
+});
