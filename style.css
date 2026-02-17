@@ -212,8 +212,6 @@ body {
     padding: 30px 0;
 }
 
-.section2 .row .left {}
-
 .section2 .row .right .about-strengths {
     display: flex;
     gap: 20px;
@@ -537,5 +535,9 @@ body {
 
     .section3 .skill-icons {
         justify-content: start;
+    }
+
+    .about-strengths {
+        flex-direction: column;
     }
 }
