@@ -230,7 +230,8 @@ body {
 
 .section2 .row .right .strength-card:hover,
 .currentRole div:hover,
-.section4 .cards .card:hover {
+.section4 .cards .card:hover,
+.timeline-content:hover {
     transform: translateY(-8px);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
@@ -270,14 +271,12 @@ body {
 
 .skills-wrapper h3 {
     padding-bottom: 30px;
-}
-
-.skills-wrapper h3 {
     color: cyan;
 }
 
 .skill-icons div {
     text-align: center;
+    /* flex: 0 0 calc(20% - 20px); */
 }
 
 .skill-icons i,
@@ -297,7 +296,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* stopped here */
 .section4 .cards .card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.25);
@@ -309,8 +307,60 @@ body {
 }
 
 
-.section4 .cards .card img {}
+.section5 {
+    position: relative;
+}
 
+.timeline {
+    position: relative;
+    margin-top: 50px;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: cyan;
+    box-shadow: 0 0 15px cyan;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 5px;
+    left: -39px;
+    width: 20px;
+    height: 20px;
+    background: #00f7ff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #00f7ff;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: 0.4s;
+}
+
+.company {
+    display: block;
+    color: cyan;
+    font-weight: bold;
+}
+
+.date {
+    /* stopped here */
+}
 
 .section7 .imgBox {
     height: 50px;
@@ -392,6 +442,7 @@ body {
     }
 }
 
+@media screen and (max-width:1024px) {}
 
 @media screen and (max-width:768px) {
 
@@ -403,17 +454,12 @@ body {
         flex-wrap: wrap;
     }
 
-    .section1,
-    .section3,
-    .section3,
-    .section4,
-    .section5,
-    .section6 {
-        padding-top: 0px;
-    }
-
     .section1 {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .section3 .skill-icons {
+        justify-content: start;
     }
 }
