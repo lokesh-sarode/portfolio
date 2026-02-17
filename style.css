@@ -40,7 +40,7 @@ body {
 }
 
 .logo img {
-    border-radius: 50%;
+    border-radius: 30px;
     border: 3px solid cyan;
 }
 
@@ -101,14 +101,18 @@ body {
     animation: scroll 1.5s infinite;
 }
 
-.section1-wrapper,
+.section1-wrapper {
+    height: 100vh;
+}
+
 .section2,
 .section3,
 .section4,
 .section5,
 .section6,
 .section7 {
-    height: 100vh;
+    min-height: 100vh;
+    margin-bottom: 50px;
     /* scroll-margin-top: 80px; */
     /* padding-top: 100px; */
 }
@@ -216,19 +220,41 @@ body {
 }
 
 .section2 .row .right .strength-card {
-    /* stopped here */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: 0.4s;
+    flex: 1;
+}
+
+.section2 .row .right .strength-card:hover,
+.currentRole div:hover,
+.section4 .cards .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 .currentRole {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     gap: 30px;
+
 }
+
+.currentRole div {
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: 0.4s;
+}
+
 
 .section3 .skill-icons {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -264,12 +290,26 @@ body {
     animation: bounce 0.53s ease-in-out infinite alternate;
 }
 
-.section4 .cards .card {
-    width: 400px;
-    border: 2px solid #001f23;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px #007180;
+
+.section4 .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
+/* stopped here */
+.section4 .cards .card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    color: white;
+    border-radius: 20px;
+    flex: 0 0 calc(33.34% - 20px);
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+
+.section4 .cards .card img {}
 
 
 .section7 .imgBox {
