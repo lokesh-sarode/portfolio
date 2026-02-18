@@ -35,11 +35,24 @@
             <a class="underline" href="#education">Education</a>
             <a class="underline" href="#contact">Contact</a>
         </div>
+
+        <div id="hamburger-menu">
+            <span id="hamburger">☰</span>
+            <div class="hamburger-popup" id="hamburger-popup">
+                <a class="underline" href="#home">Home</a>
+                <a class="underline" href="#about">About</a>
+                <a class="underline" href="#skills">Skills</a>
+                <a class="underline" href="#projects">Projects</a>
+                <a class="underline" href="#experience">Experience</a>
+                <a class="underline" href="#education">Education</a>
+                <a class="underline" href="#contact">Contact</a>
+            </div>
+        </div>
     </div>
     <!-- Scroll down -->
 
     <div class="container">
-        <div class="section1-wrapper" id="home">
+        <div class="section section1-wrapper" id="home">
             <div class="section1">
                 <div class="content">
                     <h1 style="color: cyan; font-size: 48px;">Hi,</h1>
@@ -49,12 +62,12 @@
                         I build secure, scalable web applications using Python's Django framework,
                         with a strong interest in cybersecurity and problem-solving.
                     </p>
-                    <div class="mt-5 d-flex gap-5 align-items-center">
+                    <div class="cta-btns">
                         <div>
                             <a class="button" href="#contact">Contact Me</a>
                         </div>
                         <div class="resumePopup">
-                            <button class="button" id="downloadBtn">Download Resume</button>
+                            <button class="button" id="downloadBtn">View Resume</button>
                             <div class="popup" id="popup">
                                 <div>
                                     <a class="button"
@@ -74,6 +87,10 @@
 
                 </div>
 
+                <!-- add 3d animation here -->
+                <div id="3d-container">
+
+                </div>
                 <img id="coding-photo" class="float" src="assets/coding-photo.png" alt="" width="50%">
             </div>
             <div class="text-center">
@@ -81,7 +98,7 @@
             </div>
         </div>
 
-        <div class="section2" id="about">
+        <div class="section section2" id="about">
             <div class="headings">
                 <h1 class="underline">About</h1>
             </div>
@@ -96,9 +113,8 @@
                         <!-- Temporary -->
                         <!-- <img src="assets/profile-photo-edited.png" alt="" width="90%"
                             style="filter: drop-shadow(1px 1px 10px #fff)"> -->
-                        <div class="imgBox float text-center"
-                            style="width: 80%; height: 350px; border: 2px solid white; background-color: cyan; border-radius: 30px;">
-                            <img src="assets/profile-photo.JPG" alt="" width="90%"
+                        <div class="float text-center">
+                            <img src=" assets/profile-photo.JPG" alt="" width="80%"
                                 style="margin-top: 13px; border-radius: 20px; box-shadow: 1px 1px 5px black;">
                         </div>
                     </div>
@@ -201,7 +217,7 @@
             </div>
         </div>
 
-        <div class="section3 container" id="skills">
+        <div class="section section3 container" id="skills">
             <div class="headings">
                 <h1 class="underline">Skills</h1>
             </div>
@@ -292,7 +308,7 @@
             </div>
         </div>
 
-        <div class="section4" id="projects">
+        <div class="section section4" id="projects">
             <div class="headings">
                 <h1 class="underline">Projects</h1>
             </div>
@@ -343,7 +359,7 @@
             </div>
         </div>
 
-        <div class="section5" id="experience">
+        <div class="section section5" id="experience">
             <div class="headings">
                 <h1 class="underline">Experience</h1>
             </div>
@@ -480,7 +496,7 @@
             </div>
         </div>
 
-        <div class="section6" id="education">
+        <div class="section section6" id="education">
             <div class="headings">
                 <h1 class="underline">Education</h1>
             </div>
@@ -520,7 +536,7 @@
 
         </div>
 
-        <div class="section7" id="contact">
+        <div class="section section7" id="contact">
             <div class="headings">
                 <h1 class="underline">Contact Me</h1>
             </div>
@@ -544,8 +560,13 @@
             </div>
         </div>
 
-
     </div>
+
+
+    <div class="footer container text-center">
+        <p style="font-size: 12px; color: rgba(0, 255, 255, 0.7);">Created by Lokesh Sarode</p>
+    </div>
+
 
     <script src="index.js"></script>
 </body>

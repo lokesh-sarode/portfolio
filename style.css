@@ -101,10 +101,8 @@ body {
     animation: scroll 1.5s infinite;
 }
 
-.section1-wrapper {
-    height: 100vh;
-}
 
+.section1-wrapper,
 .section2,
 .section3,
 .section4,
@@ -113,8 +111,6 @@ body {
 .section7 {
     min-height: 100vh;
     margin-bottom: 50px;
-    /* scroll-margin-top: 80px; */
-    /* padding-top: 100px; */
 }
 
 
@@ -122,7 +118,7 @@ body {
     /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .section1 {
@@ -166,14 +162,15 @@ body {
     animation: float 4s ease-in-out infinite;
 }
 
-.resumePopup {
+.resumePopup,
+#hamburger-menu {
     position: relative;
 }
 
 .popup {
     display: none;
     position: absolute;
-    top: 110%;
+    top: 100%;
     background-color: white;
     min-width: 300px;
     padding: 30px;
@@ -182,25 +179,49 @@ body {
     gap: 30px;
     z-index: 99;
     border-radius: 20px;
-    box-shadow: 1px 10px 30px rgba(0, 255, 255, 0.25);
+    /* box-shadow: 1px 10px 30px rgba(0, 255, 255, 0.25); */
     opacity: 0;
     transform: translateY(-10px);
     transition: 0.3s ease;
     pointer-events: none;
-
 }
 
-.popup a {
+.hamburger-popup {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    right: 10%;
+    min-width: 150px;
+    padding: 30px;
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 99;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.popup a,
+.hamburger-popup a {
     text-decoration: none;
+    color: white;
     width: 100%;
 }
 
-.popup.active {
+.popup.active,
+.hamburger-popup.active {
     display: flex;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 
+}
+
+.cta-btns {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
 }
 
 .section2 .card {
@@ -292,7 +313,7 @@ body {
 
 .section4 .cards {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
@@ -452,6 +473,13 @@ body {
 }
 
 
+/* Hamburger menu */
+#hamburger-menu,
+.hamburger-popup {
+    display: none;
+    cursor: pointer;
+}
+
 
 @keyframes scroll {
     0% {
@@ -516,16 +544,21 @@ body {
     }
 }
 
-@media screen and (max-width:1024px) {}
-
 @media screen and (max-width:768px) {
-
-    .header {
-        flex-direction: column;
+    html {
+        scroll-padding-top: 75px;
     }
 
     .header-list {
-        flex-wrap: wrap;
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+
+    .section1-wrapper .text-center {
+        margin-top: 20px;
     }
 
     .section1 {
@@ -533,11 +566,91 @@ body {
         gap: 20px;
     }
 
+    .scroll-down {
+        top: 400px;
+    }
+
     .section3 .skill-icons {
         justify-content: start;
+        gap: 25px;
+    }
+
+    .left .float img {
+        width: 50%;
     }
 
     .about-strengths {
         flex-direction: column;
+    }
+
+    .currentRole {
+        justify-content: space-between;
+    }
+
+    .currentRole div {
+        width: 100%;
+    }
+
+    .section4 .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section4 .cards .card {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+    .button {
+        padding: 5px 15px;
+    }
+
+    .popup {
+        top: 100%;
+        left: -65%;
+    }
+
+    .section1-wrapper,
+    .section2,
+    .section3,
+    .section4,
+    .section5,
+    .section6,
+    .section7 {
+        padding: 0 20px;
+    }
+
+    .section3 .skill-icons {
+        gap: 0px;
+    }
+
+    .section4 .cards .card {
+        width: 100%;
+    }
+
+    .cta-btns {
+        gap: 20px;
+    }
+
+    .currentRole {
+        flex-direction: column;
+    }
+
+    .section3 .skill-icons {
+        justify-content: space-between;
+    }
+
+    .section7 .glass-form {
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    .cta-btns {
+        flex-direction: column;
+        /* gap: 20px; */
     }
 }

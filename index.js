@@ -48,7 +48,27 @@ donwloadBtn.addEventListener("click", (e) => {
 popup.addEventListener("click", (e) => {
     e.stopPropagation();
 })
+
+
+const hamburgerBtn = document.getElementById("hamburger");
+const hamburgerPopup = document.getElementById("hamburger-popup");
+
+hamburgerBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    hamburgerPopup.classList.toggle("active");
+})
+
+
+hamburgerPopup.addEventListener("click", (e) => {
+    e.stopPropagation();
+})
+
+
 // closing popup
 document.addEventListener("click", () => {
     popup.classList.remove("active");
+    hamburgerPopup.classList.remove("active");
 });
+
+
+// Scroll reveal animation
