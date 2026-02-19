@@ -331,6 +331,30 @@ body {
     transition: 0.4s;
 }
 
+.section4 .cards .card .project-img {
+    position: relative;
+    /* width: 250px; */
+}
+
+.section4 .cards .card .eye-icon {
+    position: absolute;
+    filter: invert(1);
+    z-index: -99;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.section4 .cards .card img {
+    transition: 0.4s;
+
+}
+
+.section4 .cards .card img:hover {
+    opacity: 0.3;
+}
 
 .section5 {
     position: relative;
