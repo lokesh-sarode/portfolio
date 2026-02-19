@@ -1,3 +1,34 @@
+
+// Scroll reveal animation
+document.addEventListener("DOMContentLoaded", function () {
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    reveals.forEach(reveal => {
+        const rect = reveal.getBoundingClientRect();
+
+        // If already in viewport on load
+        if (rect.top < window.innerHeight) {
+            reveal.classList.add("active");
+        } else {
+            observer.observe(reveal);
+        }
+    });
+
+});
+
+
 const text = [
     "Web Developer",
     "Python Developer",
@@ -70,5 +101,3 @@ document.addEventListener("click", () => {
     hamburgerPopup.classList.remove("active");
 });
 
-
-// Scroll reveal animation
