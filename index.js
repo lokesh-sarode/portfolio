@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
 const text = [
     "Web Developer",
     "Python Developer",

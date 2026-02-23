@@ -12,7 +12,8 @@ https://lokesh-sarode.netlify.app/
 ## Tech Stack
 
 **Frontend:** HTML, CSS, JavaScript, Bootstrap
-
+**Mail Service:** Formspree.io
+**Hosting:** Netlify 
 
 ## Installation
 
