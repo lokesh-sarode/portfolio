@@ -16,7 +16,10 @@
     </style>
 </head>
 
-<body class="text-white">
+<body class="">
+    <div class="theme">
+        <i class="fa-solid fa-sun theme-button" id="theme-button"></i>
+    </div>
     <div class="scroll-down"></div>
     <div class="socials">
         <a href="https://www.instagram.com/lokesh_sarode_01" target="_blank">
@@ -73,28 +76,28 @@
         <div class="reveal section1-wrapper" id="home">
             <div class="section1">
                 <div class="content">
-                    <h1 style="color: cyan; font-size: 48px;">Hi,</h1>
+                    <h1 class="cyan-color" style="font-size: 48px;">Hi,</h1>
                     <h1>My name is <span class="name">Lokesh Sarode</span> </h1>
-                    <h5>A <span class="typing"></span></h5>
+                    <h5>A <span class="typing color-cyan"></span></h5>
                     <p>
                         I build secure, scalable web applications using Python's Django framework,
                         with a strong interest in cybersecurity and problem-solving.
                     </p>
                     <div class="cta-btns">
                         <div>
-                            <a class="button" href="#contact">Contact Me</a>
+                            <a class="button bg-cyan" href="#contact">Contact Me</a>
                         </div>
                         <div class="resumePopup">
-                            <button class="button" id="downloadBtn">View Resume</button>
+                            <button class="button bg-cyan" id="downloadBtn">View Resume</button>
                             <div class="popup" id="popup">
                                 <div>
-                                    <a class="button"
+                                    <a class="button bg-cyan"
                                         href="https://drive.google.com/file/d/1Kkujj3O09KaRdMWo-BMHe7xtT5GTyZes/view"
                                         target="_blank">Cyber
                                         Security Resume</a>
                                 </div>
                                 <div>
-                                    <a class="button"
+                                    <a class="button bg-cyan"
                                         href="https://drive.google.com/file/d/1E1U-YT6cXcfTTZwy7qb7PDvyaonrnbCi/view"
                                         target="_blank">Web
                                         Developer</a>
@@ -112,7 +115,7 @@
                 <img id="coding-photo" class="float" src="assets/coding-photo.png" alt="" width="50%">
             </div>
             <div class="text-center">
-                <a href="#about"><i class="fa-solid fa-angles-down fa-beat-fade fa-2xl" style="color: cyan;"></i></a>
+                <a href="#about"><i class="fa-solid fa-angles-down fa-beat-fade fa-2xl color-cyan"></i></a>
             </div>
         </div>
 
@@ -240,7 +243,7 @@
                 <h1 class="underline">Skills</h1>
             </div>
             <div class="skills-wrapper">
-                <h3>Web Development</h3>
+                <h3 class="color-cyan">Web Development</h3>
                 <div class="skill-icons">
                     <div>
                         <i class="fa-brands fa-python fa-beat-fade" style="color: yellowgreen; font-size: 50px;"></i>
@@ -276,7 +279,7 @@
             </div>
 
             <div class="skills-wrapper">
-                <h3>Cybersecurity</h3>
+                <h3 class="color-cyan">Cybersecurity</h3>
                 <div class="skill-icons">
                     <div>
                         <i class="fa-brands fa-linux fa-beat-fade" style="font-size: 50px;"></i>
@@ -298,7 +301,7 @@
                     </div>
 
                     <div>
-                        <img class="skill-icon" src="assets/Owasp-top-10-white.png" alt="">
+                        <img class="skill-icon invert-icon" src="assets/Owasp-top-10-white.png" alt="">
                         <p>OWASP Top 10</p>
                     </div>
                     <div>
@@ -405,11 +408,12 @@
             <div class="timeline">
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot bg-cyan"></div>
                     <div class="timeline-content" id="current">
                         <h3>Web Developer</h3>
-                        <span class="company">Arkentech Solutions</span>
-                        <span class="date">Oct 2025 - <span style="color: rgb(170, 255, 0);">Present</span></span>
+                        <span class="company color-cyan">Arkentech Solutions</span>
+                        <span class="date">Oct 2025 - <span class="color-green"
+                                style="font-weight: 600;">Present</span></span>
                         <p class="mt-3">
                             I Develope responsive web applications using HTML, CSS, JS and Bootstrap.
                             Optimized performance and collaborated with cross-functional teams.
@@ -425,10 +429,10 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot bg-cyan"></div>
                     <div class="timeline-content">
                         <h3>Cybersecurity Analyst Apprentice</h3>
-                        <span class="company">Tata STRIVE</span>
+                        <span class="company color-cyan">Tata STRIVE</span>
                         <span class="date">May 2025 - Sept 2025</span>
                         <p class="mt-3">
                             Hands-on experience in penetration testing, threat analysis, and incident response.
@@ -464,10 +468,10 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot bg-cyan"></div>
                     <div class="timeline-content">
                         <h3>Cyber Security Intern</h3>
-                        <span class="company">Code Alpha</span>
+                        <span class="company color-cyan">Code Alpha</span>
                         <span class="date">Feb 2024 - May 2024</span>
                         <p class="mt-3">
                             Completed a series of intensive security tasks including Network Sniffing, Vulnerability
@@ -505,10 +509,10 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot bg-cyan"></div>
                     <div class="timeline-content">
                         <h3>Python Developer Intern</h3>
-                        <span class="company">TechnoHacks EduTech Official</span>
+                        <span class="company color-cyan">TechnoHacks EduTech Official</span>
                         <span class="date">June 2023 - July 2023</span>
                         <p class="mt-3">
                             Developed functional Python applications focusing on core logic and user interaction. Key
@@ -544,21 +548,21 @@
                     <h3 class="edu-title">
                         Bachelor Of Engineering (IT)
                     </h3>
-                    <p style="color: cyan;">Savitribai Phule Pune University</p>
+                    <p class="color-cyan">Savitribai Phule Pune University</p>
                     <span>2021 - 2025</span>
                 </div>
                 <div class="edu-card">
                     <h3 class="edu-title">
                         Higher Secondary School
                     </h3>
-                    <p style="color: cyan;">K.C.E.S Swami Vivekanand College, Jalgaon</p>
+                    <p class="color-cyan">K.C.E.S Swami Vivekanand College, Jalgaon</p>
                     <span>2020 - 2021</span>
                 </div>
                 <div class="edu-card">
                     <h3 class="edu-title">
                         Secondary School
                     </h3>
-                    <p style="color: cyan;">Shree Swaminarayan Gurukul, Bhusawal</p>
+                    <p class="color-cyan">Shree Swaminarayan Gurukul, Bhusawal</p>
                     <span>2018 - 2019</span>
                 </div>
             </div>
@@ -592,7 +596,7 @@
                         <textarea name="message" rows="5" placeholder="Enter Message" required></textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="button">Send Message</button>
+                        <button type="submit" class="button bg-cyan">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -602,7 +606,7 @@
 
 
     <div class="footer container text-center">
-        <p style="font-size: 12px; color: rgba(0, 255, 255, 0.7);">Created by Lokesh Sarode</p>
+        <p class="color-cyan" style="font-size: 12px;">Created by Lokesh Sarode</p>
     </div>
 
 

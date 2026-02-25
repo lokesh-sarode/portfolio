@@ -12,11 +12,122 @@ html {
 }
 
 body {
+    scroll-behavior: smooth;
     font-family: 'Courier New', Courier, monospace;
-    position: relative;
+    /* position: relative; */
     /* background-color: black !important; */
+    color: white !important;
     background: radial-gradient(circle at 30% 30%, #000, #001f23);
+}
 
+.color-cyan {
+    color: cyan;
+}
+
+.color-green {
+    color: #aaff00;
+}
+
+.bg-cyan,
+.timeline::before {
+    background: cyan;
+}
+
+body.light-theme {
+    color: black !important;
+    background: white;
+}
+
+body.light-theme .icon-hover {
+    color: black;
+}
+
+body.light-theme .name,
+body.light-theme .color-cyan,
+body.light-theme .header-list a,
+body.light-theme .underline,
+body.light-theme .icon-hover:hover {
+    color: rgb(128, 0, 32);
+}
+
+body.light-theme .color-green {
+    color: green;
+}
+
+body.light-theme .bg-cyan,
+body.light-theme .timeline::before {
+    background: rgb(128, 0, 32);
+    color: white;
+}
+
+body.light-theme .header {
+    background: rgb(255, 239, 243);
+}
+
+body.light-theme .float {
+    filter: drop-shadow(5px 5px 20px rgb(128, 0, 32));
+}
+
+body.light-theme .section2 .row .right .strength-card,
+body.light-theme .currentRole div,
+body.light-theme .section6 .edu-card,
+body.light-theme .section4 .cards .card,
+body.light-theme .timeline-content,
+body.light-theme .tags span,
+body.light-theme .cert-grid span,
+body.light-theme .section7 .glass-form,
+body.light-theme .glass-form input,
+body.light-theme .glass-form textarea {
+    border: 1px solid rgba(128, 0, 32, 0.5) !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    color: black;
+}
+
+body.light-theme .logo img,
+body.light-theme .scroll-down,
+body.light-theme .scroll-down::before {
+    border: 3px solid rgb(128, 0, 32) !important;
+}
+
+body.light-theme .section2 .row .right .strength-card:hover,
+body.light-theme .currentRole div:hover,
+body.light-theme .section4 .cards .card:hover,
+body.light-theme .timeline-content:hover,
+body.light-theme .section6 .edu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(128, 0, 32, 0.5);
+}
+
+body.light-theme .button:hover,
+body.light-theme .glass-form:hover,
+body.light-theme .timeline-dot,
+body.light-theme .timeline::before {
+    box-shadow: 5px 5px 20px rgba(128, 0, 32);
+}
+
+body.light-theme .glass-form,
+body.light-theme .button {
+    box-shadow: 0 0 10px rgba(128, 0, 32, 0.5);
+}
+
+body.light-theme .glass-form input::placeholder,
+body.light-theme .glass-form textarea::placeholder {
+    color: rgba(128, 0, 32, 0.6);
+}
+
+body.light-theme #current,
+body.light-theme .glass-form input:focus,
+body.light-theme .glass-form textarea:focus {
+    border: 1px solid rgb(128, 0, 32) !important;
+    box-shadow: 0 0 10px rgba(128, 0, 32, 0.5);
+}
+
+body.light-theme .section4 .cards .card .eye-icon {
+    filter: invert(0);
+}
+
+body.light-theme .invert-icon {
+    filter: invert(1);
 }
 
 .header {
@@ -27,7 +138,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000;
+    background: #000;
     border-radius: 30px;
     animation: loading-down 1s ease-in;
 }
@@ -103,6 +214,18 @@ body {
 
 }
 
+.theme {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    animation: loading-down 1s ease-in;
+}
+
+.theme-button {
+    font-size: 24px;
+    transition: 0.5s ease;
+}
+
 .scroll-down {
     position: fixed;
     top: 50vh;
@@ -120,7 +243,6 @@ body {
     left: 50%;
     width: 5px;
     height: 5px;
-    background: cyan;
     border-radius: 50%;
     transform: translateX(-50%);
     animation: scroll 1.5s infinite;
@@ -162,19 +284,14 @@ body {
     filter: drop-shadow(5px 5px 20px cyan);
 }
 
-.typing {
-    color: cyan;
-}
 
 .button {
     /* background: linear-gradient(to right, cyan, darkblue);
     padding: 8px 25px;
     border-radius: 5px; */
     /* transition: 0.5s; */
-
     outline: none;
     border: none;
-    background: #00f7ff;
     padding: 12px 30px;
     border-radius: 30px;
     color: black;
@@ -321,7 +438,6 @@ body {
 
 .skills-wrapper h3 {
     padding-bottom: 30px;
-    color: cyan;
 }
 
 .skill-icons div {
@@ -365,7 +481,6 @@ body {
     position: absolute;
     filter: invert(1);
     z-index: -99;
-    /* background-color: rgba(0, 0, 0, 0.3); */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -413,7 +528,6 @@ body {
     left: -39px;
     width: 20px;
     height: 20px;
-    background: #00f7ff;
     border-radius: 50%;
     box-shadow: 0 0 15px #00f7ff;
 }
@@ -432,7 +546,6 @@ body {
 
 .company {
     display: block;
-    color: cyan;
     font-weight: bold;
 }
 
