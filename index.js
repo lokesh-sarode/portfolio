@@ -115,7 +115,6 @@ if (localStorage.getItem("theme") === "light") {
 themeButton.addEventListener("click", () => {
 
     document.body.classList.toggle("light-theme");
-
     if (document.body.classList.contains("light-theme")) {
         themeButton.classList.remove("fa-sun");
         themeButton.classList.add("fa-moon");

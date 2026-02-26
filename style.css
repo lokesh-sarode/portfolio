@@ -12,8 +12,6 @@ html {
 }
 
 body {
-    scroll-behavior: smooth;
-    font-family: 'Courier New', Courier, monospace;
     color: white !important;
     background: radial-gradient(circle at 30% 30%, #000, #001f23);
 }
@@ -230,7 +228,21 @@ body.light-theme .invert-icon {
 
 .theme-button {
     font-size: 24px;
-    transition: 0.5s ease;
+    transition: transform 1s ease-in-out;
+}
+
+.theme-button:hover {
+    transform: rotate(360deg);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .scroll-down {
@@ -304,7 +316,7 @@ body.light-theme .invert-icon {
     border-radius: 30px;
     color: black;
     font-weight: bold;
-    transition: 0.4s;
+    /* transition: 0.4s; */
     box-shadow: 0 0 5px #00f7ff;
 }
 
