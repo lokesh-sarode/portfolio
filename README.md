@@ -1,4 +1,6 @@
 ### Click here to view my portfolio
+https://lokesh-sarode.github.io/portfolio/
+OR
 https://lokesh-sarode.netlify.app/
 
 # My Portfolio
