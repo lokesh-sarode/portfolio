@@ -29,7 +29,8 @@ body {
 }
 
 .bg-cyan,
-.timeline::before {
+.timeline::before,
+.scroll-down::before {
     background: cyan;
 }
 
@@ -86,7 +87,11 @@ body.light-theme .glass-form textarea {
 body.light-theme .logo img,
 body.light-theme .scroll-down,
 body.light-theme .scroll-down::before {
-    border: 3px solid rgb(128, 0, 32) !important;
+    border: 2px solid rgb(128, 0, 32) !important;
+}
+
+body.light-theme .popup {
+    border: 1px solid rgba(128, 0, 32, 0.5);
 }
 
 body.light-theme .section2 .row .right .strength-card:hover,
@@ -134,7 +139,7 @@ body.light-theme .invert-icon {
     padding: 10px 0px;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -203,7 +208,7 @@ body.light-theme .invert-icon {
 }
 
 .socials a {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .socials {
@@ -211,13 +216,15 @@ body.light-theme .invert-icon {
     top: 60vh;
     display: flex;
     flex-direction: column;
-
+    z-index: 2;
 }
 
 .theme {
     position: fixed;
     top: 20px;
     right: 25px;
+    width: max-content;
+    z-index: 2;
     animation: loading-down 1s ease-in;
 }
 
@@ -234,6 +241,7 @@ body.light-theme .invert-icon {
     height: 50px;
     border: 2px solid cyan;
     border-radius: 20px;
+    z-index: 2;
 }
 
 .scroll-down::before {
@@ -308,6 +316,11 @@ body.light-theme .invert-icon {
     animation: float 4s ease-in-out infinite;
 }
 
+#hamburger {
+    font-size: 22px;
+    z-index: 3;
+}
+
 .resumePopup,
 #hamburger-menu {
     position: relative;
@@ -323,8 +336,8 @@ body.light-theme .invert-icon {
     margin-top: 10px;
     flex-direction: column;
     gap: 30px;
-    z-index: 99;
     border-radius: 20px;
+    border: 1px solid cyan;
     /* box-shadow: 1px 10px 30px rgba(0, 255, 255, 0.25); */
     opacity: 0;
     transform: translateY(-10px);
@@ -342,7 +355,7 @@ body.light-theme .invert-icon {
     margin-top: 10px;
     flex-direction: column;
     gap: 30px;
-    z-index: 99;
+    z-index: 3;
     border-radius: 20px;
     opacity: 0;
 }
@@ -480,7 +493,7 @@ body.light-theme .invert-icon {
 .section4 .cards .card .eye-icon {
     position: absolute;
     filter: invert(1);
-    z-index: -99;
+    z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -734,9 +747,25 @@ body.light-theme .invert-icon {
     }
 }
 
+@media screen and (max-width:1024px) {
+    .theme {
+        top: 20px;
+        left: 35%;
+    }
+}
+
 @media screen and (max-width:768px) {
     html {
         scroll-padding-top: 75px;
+    }
+
+    .theme {
+        top: 20px;
+        left: 80%;
+    }
+
+    .socials a {
+        font-size: 28px !important;
     }
 
     .container {
@@ -802,6 +831,19 @@ body.light-theme .invert-icon {
 }
 
 @media screen and (max-width:425px) {
+    .container {
+        padding: 0 5% !important;
+    }
+
+    .theme {
+        top: 20px;
+        left: 75%;
+    }
+
+    .header {
+        padding: 10px 20px !important;
+    }
+
     .button {
         padding: 5px 15px;
     }
@@ -848,6 +890,15 @@ body.light-theme .invert-icon {
 }
 
 @media screen and (max-width:320px) {
+    .theme {
+        top: 20px;
+        left: 70%;
+    }
+
+    .socials a i {
+        font-size: 26px !important;
+    }
+
     .cta-btns {
         flex-direction: column;
         /* gap: 20px; */
