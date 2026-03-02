@@ -680,7 +680,8 @@ body.light-theme .invert-icon {
 .reveal {
     opacity: 0;
     transform: translateY(60px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    /* transition: opacity 0.8s ease, transform 0.8s ease; */
+    transition: all 0.8s ease;
 }
 
 .reveal.active {
