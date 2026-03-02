@@ -302,6 +302,9 @@ body.light-theme .invert-icon {
 
 .float {
     filter: drop-shadow(5px 5px 20px cyan);
+    /* box-shadow: 5px 5px 20px cyan; */
+    animation: float 4s ease-in-out infinite;
+
 }
 
 
@@ -324,9 +327,6 @@ body.light-theme .invert-icon {
     box-shadow: 0 0 10px #00f7ff;
 }
 
-.float {
-    animation: float 4s ease-in-out infinite;
-}
 
 #hamburger {
     font-size: 22px;
