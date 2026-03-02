@@ -52,6 +52,7 @@ body.light-theme .color-green {
 }
 
 body.light-theme .bg-cyan,
+body.light-theme .scroll-down::before,
 body.light-theme .timeline::before {
     background: rgb(128, 0, 32);
     color: white;
