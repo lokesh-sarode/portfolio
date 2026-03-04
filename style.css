@@ -16,6 +16,19 @@ body {
     background: radial-gradient(circle at 30% 30%, #000, #001f23);
 }
 
+.progress-bar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 2px;
+    width: 0%;
+    /* background: linear-gradient(90deg, #014949 20%, #009191 40%, #00ffff 100%); */
+    /* background: linear-gradient(90deg, #ff5100 20%, #000 50%, #ff702d 75%, #ffa074 100%); */
+    /* background: linear-gradient(90deg, #ff0000 14.28%, #ff5100 28.56%, #ffd000 42.84%, #09ff00 57.12%, #0400ff 71.4%, #ff00bf 85.68%, #ff006a 100%); */
+    background: linear-gradient(90deg, #0a3a3a, #39AAAA, #23D5D5, #00FFFF);
+    z-index: 2;
+}
+
 .color-cyan {
     color: cyan;
 }
