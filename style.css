@@ -20,7 +20,7 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    height: 2px;
+    height: 3px;
     width: 0%;
     /* background: linear-gradient(90deg, #014949 20%, #009191 40%, #00ffff 100%); */
     /* background: linear-gradient(90deg, #ff5100 20%, #000 50%, #ff702d 75%, #ffa074 100%); */
@@ -62,6 +62,10 @@ body.light-theme .icon-hover:hover {
 
 body.light-theme .color-green {
     color: green;
+}
+
+body.light-theme .progress-bar {
+    background: linear-gradient(90deg, #3a0a0a, #aa3939, #d52323, #ff0000);
 }
 
 body.light-theme .bg-cyan,
@@ -150,13 +154,16 @@ body.light-theme .invert-icon {
 .header {
     padding: 10px 0px;
     position: sticky;
-    top: 0;
+    top: 3px;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #000;
-    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 247, 255, 0.3);
+    box-shadow: 1px 0px 5px rgba(255, 247, 255, 0.3);
+    border-radius: 40px;
     animation: loading-down 1s ease-in;
 }
 
