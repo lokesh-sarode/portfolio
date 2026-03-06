@@ -156,7 +156,7 @@ body.light-theme .invert-icon {
 }
 
 .header {
-    padding: 8px 0px;
+    padding: 5px 0px;
     position: sticky;
     top: 3px;
     z-index: 1;
@@ -832,13 +832,19 @@ body.light-theme .invert-icon {
     }
 }
 
+@media (min-width:426px) and (max-width:767px) {
+    .container {
+        padding: 0 8% !important;
+    }
+}
+
 @media screen and (max-width:768px) {
     html {
         scroll-padding-top: 75px;
     }
 
     .theme {
-        top: 20px;
+        top: 18px;
         left: 80%;
     }
 
@@ -851,7 +857,7 @@ body.light-theme .invert-icon {
     }
 
     .header {
-        padding: 10px 20px !important;
+        padding: 5px 20px !important;
     }
 
     .header-list {
@@ -914,12 +920,12 @@ body.light-theme .invert-icon {
     }
 
     .theme {
-        top: 20px;
+        top: 18px;
         left: 75%;
     }
 
     .header {
-        padding: 10px 20px !important;
+        padding: 5px 20px !important;
     }
 
     .button {
@@ -968,10 +974,6 @@ body.light-theme .invert-icon {
 }
 
 @media screen and (max-width:320px) {
-    .theme {
-        top: 20px;
-        left: 70%;
-    }
 
     .socials a i {
         font-size: 26px !important;
