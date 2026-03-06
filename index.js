@@ -1,3 +1,16 @@
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    const main = document.getElementById("main");
+
+    setTimeout(() => {
+        loader.style.display = "none";
+        main.style.display = "block";
+        main.style.opacity = 1;
+    }, 3000);
+})
+
+
+
 window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
     const docHeight = document.body.scrollHeight - window.innerHeight;
