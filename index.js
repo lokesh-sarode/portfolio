@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
         loader.style.display = "none";
         main.style.display = "block";
         main.style.opacity = 1;
+
+        initReveal();
     }, 3000);
 })
 
@@ -21,8 +23,7 @@ window.addEventListener("scroll", () => {
 
 
 // Scroll reveal animation
-document.addEventListener("DOMContentLoaded", function () {
-
+function initReveal() {
     const reveals = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -46,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
             observer.observe(reveal);
         }
     });
+}
 
-});
 
 const text = [
     "Web Developer",
