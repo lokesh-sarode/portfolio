@@ -299,12 +299,12 @@ body.light-theme .invert-icon {
     animation: scroll 1.5s infinite;
 }
 
-
-.section1-wrapper,
 .section3 {
     min-height: 100vh;
 }
 
+
+.section1-wrapper,
 .section2,
 .section4,
 .section5,
@@ -359,6 +359,7 @@ body.light-theme .invert-icon {
 }
 
 .angle-down {
+    margin-top: 20px;
     animation: loading-up 0.8s ease-in;
 }
 
@@ -455,7 +456,6 @@ body.light-theme .invert-icon {
 
 .section2 .row .right .strength-card:hover,
 .currentRole div:hover,
-.section3 .skill-icon-wrapper:hover,
 .section4 .cards .card:hover,
 .timeline-content:hover,
 .section6 .edu-card:hover {
@@ -481,39 +481,180 @@ body.light-theme .invert-icon {
 }
 
 
+
 .section3 .skill-icons {
-    display: flex;
-    align-items: center;
     /* justify-content: space-around; */
-    flex-wrap: wrap;
+    /* display: flex;
+    align-items: center;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
 
 .section3 .skill-icon-wrapper {
-    width: 187px;
     display: flex;
-    gap: 20px;
     align-items: center;
-    justify-content: start;
-    padding: 10px;
+    gap: 15px;
+    padding: 15px;
 
-    background: rgba(0, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.3);
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
 
-    transition: 0.3s;
+    backdrop-filter: blur(6px);
+
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .section3 .skill-icon-wrapper:hover {
-    border: 1px solid rgba(0, 247, 255);
+    scale: 1.02;
+    border: 1px solid rgba(0, 255, 255);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
-.skill-icon-wrapper i:hover {
-    filter: drop-shadow(1px 1px 15px rgba(0, 255, 255, 0.5));
+.section3.reveal.active .skill-icon-wrapper {
+    opacity: 0;
+    animation: slideX 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .section3 .skill-icon-wrapper p {
     margin-bottom: 0;
+}
+
+.skill-text {
+    width: 100%;
+    text-align: start;
+}
+
+.skill-bar {
+    /* padding: 1px; */
+    background: rgba(255, 255, 255, 0.5);
+    /* color: black; */
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.percent {
+    text-align: right;
+    color: white;
+    border-radius: 30px;
+    animation: width 1s ease-in-out;
+    font-size: 10px;
+}
+
+
+.python {
+    width: 80%;
+    background: linear-gradient(to left, #daae00, #003866);
+}
+
+.django {
+    width: 60%;
+    background: linear-gradient(to left, #092E20, #00A36C);
+}
+
+.html {
+    width: 95%;
+    background: linear-gradient(to left, #FF6200, #FD7F2C, #FDA766);
+}
+
+.css {
+    width: 80%;
+    background: linear-gradient(to left, #0000ff, #43aaf9);
+}
+
+.javascript {
+    width: 75%;
+    background: linear-gradient(to left, #f0b820, #f7df1e);
+}
+
+.git {
+    width: 80%;
+    background: linear-gradient(to left, #F05033, #a3351d);
+}
+
+.github {
+    width: 90%;
+    background: linear-gradient(to left, black, grey);
+}
+
+.linux {
+    width: 85%;
+    background: linear-gradient(to left, #77216F, #DD4814);
+}
+
+.windows {
+    width: 95%;
+    background: linear-gradient(to left, #005A83, #00B4F1);
+}
+
+.osiModel {
+    width: 85%;
+    background: linear-gradient(to left, #a3351d, #F05033);
+}
+
+.terminal {
+    width: 90%;
+    background: linear-gradient(to left, black, grey);
+}
+
+.owasp {
+    width: 85%;
+    background: linear-gradient(to left, black, grey);
+}
+
+.burpsuite {
+    width: 85%;
+    background: linear-gradient(to left, #BB1900, #FD6F01);
+}
+
+.nmap {
+    width: 95%;
+    background: linear-gradient(to left, #002e5d, #005aa7);
+}
+
+.wireshark {
+    width: 90%;
+    background: linear-gradient(to left, #005086, #00a4e4);
+}
+
+.metasploit {
+    width: 95%;
+    background: linear-gradient(to left, #002e5d, #2774ae);
+}
+
+.nessus {
+    width: 90%;
+    background: linear-gradient(to left, #11005c, #000fdf);
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+}
+
+.section3.active .python,
+.section3.active .django,
+.section3.active .html,
+.section3.active .css,
+.section3.active .javascript,
+.section3.active .git,
+.section3.active .github,
+.section3.active .linux,
+.section3.active .windows,
+.section3.active .osiModel,
+.section3.active .terminal,
+.section3.active .owasp,
+.section3.active .burpsuite,
+.section3.active .nmap,
+.section3.active .wireshark,
+.section3.active .metasploit,
+.section3.active .nessus {
+    animation: fill 2s ease-out forwards;
 }
 
 .headings {
@@ -529,16 +670,6 @@ body.light-theme .invert-icon {
 .skills-wrapper h3 {
     padding-bottom: 30px;
 }
-
-.skill-icons div {
-    text-align: center;
-}
-
-/* 
-.skill-icons i,
-.skill-icons .skill-icon {
-    margin-bottom: 10px;
-} */
 
 .skill-icon {
     width: 50px;
@@ -592,7 +723,7 @@ body.light-theme .invert-icon {
 
 .timeline {
     position: relative;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     padding-left: 40px;
 }
 
@@ -839,6 +970,18 @@ body.light-theme .invert-icon {
     }
 }
 
+@keyframes slideX {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -978,7 +1121,6 @@ body.light-theme .invert-icon {
 
     .section3 .skill-icons {
         gap: 10px;
-        justify-content: center !important;
     }
 
     .section4 .cards .card {

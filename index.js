@@ -34,18 +34,19 @@ function initReveal() {
             }
         });
     }, {
-        threshold: 0.15
+        threshold: 0.05
     });
 
     reveals.forEach(reveal => {
-        const rect = reveal.getBoundingClientRect();
+        // const rect = reveal.getBoundingClientRect();
 
-        // If already in viewport on load
-        if (rect.top < window.innerHeight) {
-            reveal.classList.add("active");
-        } else {
-            observer.observe(reveal);
-        }
+        // // If already in viewport on load
+        // if (rect.top < window.innerHeight) {
+        //     reveal.classList.add("active");
+        // } else {
+        //     observer.observe(reveal);
+        // }
+        observer.observe(reveal);
     });
 }
 
