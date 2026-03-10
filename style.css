@@ -11,6 +11,10 @@ html {
     scroll-padding-top: 80px;
 }
 
+::selection {
+    background: rgba(0, 255, 255, 0.5);
+}
+
 body {
     color: white !important;
     background: radial-gradient(circle at 30% 30%, #000, #001f23);
