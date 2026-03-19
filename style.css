@@ -56,6 +56,11 @@ body.light-theme .icon-hover {
     color: black;
 }
 
+body.light-theme ::selection {
+    background: rgba(128, 0, 32, 0.6);
+    color: white;
+}
+
 body.light-theme .name,
 body.light-theme .color-cyan,
 body.light-theme .header-list a,
@@ -130,7 +135,7 @@ body.light-theme .section6 .edu-card:hover {
     box-shadow: 0 0 20px rgba(128, 0, 32, 0.5);
 }
 
-body.light-theme .button:hover,
+
 body.light-theme .glass-form:hover,
 body.light-theme .timeline-dot,
 body.light-theme .timeline::before {
@@ -358,8 +363,8 @@ body.light-theme .invert-icon {
     box-shadow: 0 0 5px #00f7ff;
 }
 
-.button:hover {
-    box-shadow: 0 0 10px #00f7ff;
+.button:active {
+    scale: 0.9;
 }
 
 .angle-down {
