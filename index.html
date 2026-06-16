@@ -22,9 +22,9 @@
         .reveal-name {
             font-family: bilona;
             font-size: 60px;
-            animation: shrinkAndMoveOut 3s forwards ease-in-out;
+            animation: shrinkAndMoveOut 2s forwards ease-in-out;
             color: cyan;
-            /* animation-delay: 1s; */
+            /* animation-delay: 0.3s; */
         }
 
         .loader-container {
@@ -38,7 +38,7 @@
         }
 
         .main-wrapper {
-            transition: opacity 1s ease-in;
+            transition: opacity 0.5s ease-in;
         }
 
         @keyframes shrinkAndMoveOut {
@@ -498,6 +498,18 @@
                             <h6 class="card-subtitle">Html, Css, Javascript, Bootstrap</h6>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="project-img">
+                            <a href="https://github.com/lokesh-sarode/e-verify-it" target="_blank"><img
+                                    src="assets/projects/e-verify-it.png" alt="" width="100%"></a>
+                            <img src="assets/eyes.png" alt="" class="eye-icon" width="25%">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">EVerifyIt: Email Verification Tool</h4>
+                            <h6 class="card-subtitle">Html, Css, Javascript, Bootstrap React, Tailwind CSS, Vite, NodeJS
+                            </h6>
+                        </div>
+                    </div>
                     <!-- <div class="card">
                     <a href=""><img src="assets/projects/sports-portal-img.png" alt="" width="100%"></a>
                     <div class="card-body">
@@ -734,7 +746,7 @@
     <script>
         // Initialize Lenis
         const lenis = new Lenis({
-            duration: 3, // Customize the duration of the scroll animation
+            duration: 1.8, // Customize the duration of the scroll animation
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Use a custom easing function
             smoothWheel: true, // Smooth scrolling for mouse wheel events
             autoRaf: true, // Automatically run the requestAnimationFrame loop
