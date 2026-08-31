@@ -309,7 +309,7 @@ body.light-theme .invert-icon {
 }
 
 .section3 {
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 
@@ -319,7 +319,7 @@ body.light-theme .invert-icon {
 .section5,
 .section6,
 .section7 {
-    min-height: 100vh;
+    min-height: 100dvh;
     margin-bottom: 50px;
 }
 
